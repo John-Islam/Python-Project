@@ -1,0 +1,30 @@
+import random
+
+while True:
+    a = int(input("a: "))
+    b = int(input("b: "))
+
+    c = random.randint(a, b)
+#Here we are checking that the number is even or odd.
+    if c % 2 == 0:
+        print("{} is an even number".format(c))
+    else:
+        print("{} is a odd number".format(c))
+
+#Here we are checking that the number is negative or positive.
+    if c > 0:
+        print("{} is a positive number".format(c))
+    else:
+        print("{} is negative number".format(c))
+
+#Here we are checking that the number is compositive or prime.
+    if c > 1:
+        for i in range(2, c):
+            if c % i == 0:
+                print("{} is a composite number".format(c))
+                break
+        else:
+            print("{} is a prime number".format(c))
+
+    i = input("Enter anything to continue or Enter 'No' to exit:")
+    if i=="no" or i=="No" or i=="NO" or i=="nO":
